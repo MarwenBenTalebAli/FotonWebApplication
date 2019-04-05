@@ -1,0 +1,724 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Getting Started: Serving Web Content</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+<link rel="icon" type="image/png"
+	href="../static/assets/img/favicon.ico"
+	th:href="@{/assets/img/favicon.ico}">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<title>Foton</title>
+
+<meta
+	content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+	name='viewport' />
+
+<link href="../static/assets/css/bootstrap.css"
+	th:href="@{/assets/css/bootstrap.css}" rel="stylesheet" />
+<link href="../static/assets/css/rubick.css"
+	th:href="@{/assets/css/rubick.css}" rel="stylesheet" />
+
+<!--     Fonts and icons     -->
+<link
+	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+	th:href="@{http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css}"
+	rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700'
+	th:href="@{http://fonts.googleapis.com/css?family=Droid+Serif:400,700}"
+	rel='stylesheet' type='text/css'>
+<link href="../static/assets/css/fonts/pe-icon-7-stroke.css"
+	th:href="@{/assets/css/fonts/pe-icon-7-stroke.css}" rel="stylesheet">
+<link href="../static/assets/css/fonts/Rubik-Fonts.css"
+	th:href="@{/assets/css/fonts/Rubik-Fonts.css}" rel="stylesheet" />
+
+</head>
+<body class="landing-page">
+	<nav
+		class="navbar navbar-default navbar-transparent navbar-fixed-top navbar-burger"
+		role="navigation">
+		<!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
+
+		<div class="container">
+			<div class="navbar-header">
+				<button id="menu-toggle" type="button" class="navbar-toggle"
+					data-toggle="collapse" data-target="#example"
+					th:attr="data-toggle='collapse',data-target='#example'">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar bar1"></span> <span class="icon-bar bar2"></span>
+					<span class="icon-bar bar3"></span>
+				</button>
+				<a href="http://www.foton-it.com"
+					th:href="@{http://www.foton-it.com}" class="navbar-brand"> <img
+					alt="Foton" width="120" height="120" style="margin-top: -58px;"
+					src="../static/assets/img/logo.png"
+					th:src="@{/assets/img/logo.png}">
+				</a>
+			</div>
+
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right navbar-uppercase">
+					<li class="social-links"><a href="#" th:href="@{#}"> <i
+							class="fa fa-facebook"></i>
+					</a> <a href="#" th:href="@{#}"> <i class="fa fa-twitter"></i>
+					</a> <a href="#" th:href="@{#}"> <i class="fa fa-instagram"></i>
+					</a></li>
+					<li><a href="" th:href="@{''}" data-scroll="true"
+						data-id="#whoWeAre1"
+						th:attr="data-scroll=true,data-id='#whoWeAre1'"> About </a></li>
+					<li><a href="" th:href="@{''}" data-scroll="true"
+						data-id="#clients1" th:attr="data-scroll=true,data-id='#clients1'">
+							Clients </a></li>
+					<li><a href="" data-scroll="true" data-id="#team1"
+						th:attr="data-scroll=true,data-id='#team1'"> Team </a></li>
+					<li><a href="" th:href="@{''}" data-scroll="true"
+						data-id="#numbers1" th:attr="data-scroll=true,data-id='#numbers1'">
+							Numbers </a></li>
+					<li><a href="" th:href="@{''}" data-scroll="true"
+						data-id="#contact1" th:attr="data-scroll=true,data-id='#contact1'">
+							Contact </a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+	</nav>
+
+	<div class="wrapper">
+		<div class="section section-header" id="header3">
+			<div id="video-container-3"
+				class="full-image pattern-image filter filter-color-gold"
+				data-color="gold" th:attr="data-color='gold'">
+
+				<div class="container">
+					<div class="content">
+						<h1>Foton</h1>
+						<div class="separator-container">
+							<div class="separator line-separator">✻</div>
+						</div>
+						<h5>Beyond Innovation</h5>
+					</div>
+				</div>
+				<video class="bgvid" preload="auto" loop="loop" autoplay="false"
+					muted="muted" volume="0">
+					<source src="../static/assets/video/time.webm"
+						th:src="@{/assets/video/time.webm}" type="video/webm"
+						responsive-src="../static/assets/img/rubik_responsive.jpg"
+						th:responsive-src="@{/assets/img/rubik_responsive.jpg}">
+					<source src="../static/assets/video/time.mp4"
+						th:src="@{/assets/video/time.mp4}" type="video/mp4">
+					Video not supported
+				</video>
+			</div>
+			<a href="" th:href="@{''}" data-scroll="true" data-id="#whoWeAre1"
+				th:attr="data-scroll=true,data-id='#whoWeAre1'"
+				class="scroll-arrow hidden-xs hidden-sm"> <i
+				class="fa fa-angle-down"></i>
+			</a>
+		</div>
+
+		<!-- SECTION WHO WE ARE -->
+		<div class="section section-we-are-1" id="whoWeAre1">
+			<div class="text-area">
+				<div class="container">
+					<div class="row">
+						<div class="title add-animation-stopped">
+							<h2>Who we are</h2>
+							<div class="separator-container">
+								<div class="separator line-separator">✻</div>
+							</div>
+							<p class="large">Foton is startup specialized in web
+								developmenet. with a very smart team of developers, we have a
+								big potential to show.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="parallax full-image pattern-image">
+				<img alt="..." class="parallax-img"
+					src="../static/assets/img/builder/projects/project.jpg"
+					th:src="@{/assets/img/builder/projects/project.jpg}">
+			</div>
+		</div>
+		<!-- END SECTION WHO WE ARE -->
+
+		<!-- SECTIONS WHAT WE DO -->
+		<!-- Section "What We do" example 4: Big Title & 4 columns icons -->
+		<div class="section section-we-do-2" id="workflow2">
+			<div class="container">
+				<div class="row">
+					<div class="title add-animation-stopped">
+						<h2>What we do</h2>
+						<div class="separator-container">
+							<div class="separator line-separator">✻</div>
+						</div>
+						<p>Foton is your IT partner. we help you design, build and
+							maintain any solution wether from scrach or based on another app.</p>
+					</div>
+					<div class="col-md-4">
+						<div class="card add-animation-stopped animation-1">
+							<div class="icon">
+								<i class="fa fa-globe"></i>
+							</div>
+							<h3>Web apps</h3>
+							<p>We offfer high quality web applications including simple
+								websites, e-commerce and erp.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card add-animation-stopped animation-2">
+							<div class="icon">
+								<i class="pe-7s-headphones"></i>
+							</div>
+							<h3>Customer Support</h3>
+							<p>Online interventions and maintenance.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card add-animation-stopped animation-3">
+							<div class="icon">
+								<i class="fa fa-th-large"></i>
+							</div>
+							<h3>Blockchain applications</h3>
+							<p>We love sharing our expertise in blockchain.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Section "What We do" example 3: Small Title & 3 columns icons -->
+		<!-- END SECTIONS WHAT WE DO -->
+
+		<!--  SECTION CLIENTS -->
+		<!-- Section "Clients" example 1: 4 Columns Logos -->
+		<div class="section section-clients-1" id="clients1">
+			<div class="container">
+				<div class="text-area">
+					<div class="title add-animation-stopped">
+						<h2>Clients</h2>
+						<div class="separator-container">
+							<div class="separator line-separator">✻</div>
+						</div>
+						<p>They trusted us for their projects.</p>
+					</div>
+				</div>
+				<div class="list-logos">
+					<div class="row">
+						<div class="col-md-3">
+							<div class="logo add-animation-stopped animation-1">
+								<a href="#"> <img alt="..."
+									src="../static/assets/img/clients/techdot.png"
+									th:src="@{/assets/img/clients/techdot.png}" /> <img alt="..."
+									src="../static/assets/img/clients/techdot.png"
+									th:src="@{/assets/img/clients/techdot.png}" />
+								</a>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="logo add-animation-stopped animation-2">
+								<a href="#"> <img alt="..."
+									src="../static/assets/img/clients/shardus.jpg"
+									th:src="@{/assets/img/clients/shardus.jpg}" /> <img alt="..."
+									src="../static/assets/img/clients/shardus.jpg"
+									th:src="@{/assets/img/clients/shardus.jpg}" />
+								</a>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="logo add-animation-stopped animation-3">
+								<a href="#"> <img alt="..."
+									src="../static/assets/img/clients/bundle.png"
+									th:src="@{/assets/img/clients/bundle.png}" /> <img alt="..."
+									src="../static/assets/img/clients/bundle.png"
+									th:src="@{/assets/img/clients/bundle.png}" />
+								</a>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="logo add-animation-stopped animation-1">
+								<a href="#"> <img alt="..."
+									src="../static/assets/img/clients/oliva.png"
+									th:src="@{/assets/img/clients/oliva.png}" /> <img alt="..."
+									src="../static/assets/img/clients/oliva.png"
+									th:src="@{/assets/img/clients/oliva.png}" />
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Section "Clients" example 2: 4 Columns Logos -->
+
+		<!-- SECTION TEAM -->
+
+		<!-- Section "Team" example 3: 4 Profiles Style 1 -->
+		<div class="section section-team-2" id="team1">
+			<div class="container">
+				<div class="text-area">
+					<div class="title add-animation-stopped">
+						<h2>Team</h2>
+						<div class="separator-container">
+							<div class="separator line-separator">✻</div>
+						</div>
+					</div>
+				</div>
+				<div class="team">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="member add-animation-stopped animation-1">
+								<img alt="..." class="img-circle"
+									src="../static/assets/img/faces/face_0.jpg"
+									th:src="@{/assets/img/faces/face_0.jpg}" />
+								<div class="description">
+									<h3 class="big-text">Maher BEN TALEB ALI</h3>
+									<p class="small-text">CEO / Founder</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="member add-animation-stopped animation-2">
+								<img alt="..." class="img-circle"
+									src="../static/assets/img/faces/img_m.jpg"
+									th:src="@{/assets/img/faces/img_m.jpg}" />
+								<div class="description">
+									<h3 class="big-text">Marwen BEN TALEB ALI</h3>
+									<p class="small-text">Senior developper</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Section "Team" example 3: 4 Profiles Style 1 -->
+
+		<!-- END SECTION TEAM -->
+
+		<!-- SECTION NUMBERS -->
+
+		<!-- Section "Numbers" example 3: Text & Parallax -->
+		<div class="section section-numbers-2" id="numbers1">
+			<div class="parallax pattern-image">
+				<img alt="..." src="../static/assets/img/rubik_background.jpg"
+					th:src="@{/assets/img/rubik_background.jpg}" />
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<div class="description">
+							<div class="title">
+								<h2>Numbers</h2>
+								<div class="separator-container">
+									<div class="separator line-separator">✻</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card card-plain">
+							<h3>Customers</h3>
+							<h5>Enterprises and startups</h5>
+							<div class="number" id="customersNo">5</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card card-plain">
+							<h3>Projects</h3>
+							<h5>Design, Implementation and Maintenance</h5>
+							<div class="number" id="projectsNo">10</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card card-plain">
+							<h3>Cities</h3>
+							<h5>Where you can find our work</h5>
+							<div class="number" id="citiesNo">6</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Section "Numbers" example 3: Text & Parallax -->
+
+		<!-- END SECTION NUMBERS -->
+
+		<!-- SECTION CONTACT -->
+		<!-- Section "Contact" example 3: Form Style 1 & Address -->
+		<div class="section section-contact-1" id="contact1">
+			<div class="container">
+				<div class="text-area">
+					<div class="title add-animation-stopped">
+						<h2>Contact</h2>
+						<div class="separator-container">
+							<div class="separator line-separator">✻</div>
+						</div>
+						<p>We knee to hear from you. Please visit us in our office or
+							you can send us an email.</p>
+					</div>
+					<div class="contact-form">
+						<div class="row">
+							<div class="col-md-3 right-border">
+								<div class="address add-animation-stopped animation-1">
+									<h4>Where to meet ?</h4>
+									<p class="text-gray">
+										kalâa Sghira, Sousse<br> rue el bayrouni<br> Tunisia
+									</p>
+									<h4>Phone</h4>
+									<p class="text-gray">+216 24 371 427</p>
+									<h4>By the old way</h4>
+									<a href="mailto:contact@foton-it.com">
+										<p class="text-gray">contact@foton-it.com</p>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-8 col-md-offset-1">
+								<!--  action="/send-email" th:action="@{/send-email}" -->
+								<form th:object="${mailForm}" role="form" id="contactForm"
+									method="post">
+									<div class="form-group add-animation-stopped animation-1">
+										<input type="text" name="name" id="senderFullName"
+											th:field="*{senderFullName}" value=""
+											placeholder="Your Full Name" class="form-control"> <span
+											class="text-danger"
+											th:if="${#fields.hasErrors('senderFullName')}"
+											th:errors="*{senderFullName}">Name Error</span>
+									</div>
+									<div class="form-group add-animation-stopped animation-2">
+										<input type="text" name="email" value="" id="senderEmail"
+											th:field="*{senderEmail}" placeholder="Your Email"
+											class="form-control"> <span class="text-danger"
+											th:if="${#fields.hasErrors('senderEmail')}"
+											th:errors="*{senderEmail}">Email Error</span>
+									</div>
+									<div class="form-group add-animation-stopped animation-3">
+										<textarea name="content" class="form-control" id="message"
+											th:field="*{message}"
+											placeholder="Here you can write some nice text" rows="8"></textarea>
+										<span class="text-danger"
+											th:if="${#fields.hasErrors('message')}"
+											th:errors="*{message}">Message Error</span>
+									</div>
+									<button type="submit" class="btn btn-lg btn-black pull-right">
+										SEND <i class="fa fa-paper-plane"></i>
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Section "Contact" example 3: Form Style 1 & Address -->
+		<!-- END SECTION CONTACT -->
+
+		<!-- FOOTER -->
+		<footer class="footer footer-big footer-color-black"
+			data-color="black">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2 col-sm-3">
+						<div class="info add-animation-stopped animation-1">
+							<h5 class="title">Company</h5>
+							<nav>
+								<ul>
+									<li><a href="#" th:href="@{#}"> Home </a></li>
+									<li><a href="#" th:href="@{#}"> Find offers </a></li>
+									<li><a href="#" th:href="@{#}"> Discover Projects </a></li>
+									<li><a href="#" th:href="@{#}"> Our Portfolio </a></li>
+									<li><a href="#" th:href="@{#}"> About Us </a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="col-md-3 col-md-offset-1 col-sm-3">
+						<div class="info add-animation-stopped animation-2">
+							<h5 class="title">Help and Support</h5>
+							<nav>
+								<ul>
+									<li><a href="#" th:href="@{#}"> Contact Us </a></li>
+									<li><a href="#" th:href="@{#}"> How it works </a></li>
+									<li><a href="#" th:href="@{#}"> Terms &amp; Conditions
+									</a></li>
+									<li><a href="#" th:href="@{#}"> Company Policy </a></li>
+									<li><a href="#" th:href="@{#}"> Money Back </a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3">
+						<div class="info add-animation-stopped animation-3">
+							<h5 class="title add-animation-stopped">Latest News</h5>
+							<nav>
+								<ul>
+									<li><a href="#" th:href="@{#}"> <i
+											class="fa fa-twitter"></i> <b>Decrypt the encrypt about
+												blockchain</b> written by Maher BEN TALEB ALI
+											<hr class="hr-small">
+									</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="col-md-2 col-md-offset-1 col-sm-3">
+						<div class="info add-animation-stopped animation-4">
+							<h5 class="title add-animation-stopped">Follow us on</h5>
+							<nav>
+								<ul>
+									<li><a href="https://www.facebook.com/FotonITC/"
+										th:href="@{https://www.facebook.com/FotonITC/}"
+										class="btn btn-social btn-facebook btn-simple"> <i
+											class="fa fa-facebook-square"></i> Facebook
+									</a></li>
+									<li><a href="#" th:href="@{#}"
+										class="btn btn-social btn-dribbble btn-simple"> <i
+											class="fa fa-linkedin"></i> Linkedin
+									</a></li>
+									<li><a href="https://twitter.com/FotonITC"
+										class="btn btn-social btn-twitter btn-simple"> <i
+											class="fa fa-twitter"></i> Twitter
+									</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="copyright">© 2019 Foton, made with love</div>
+			</div>
+		</footer>
+		<!-- END FOOTER -->
+	</div>
+
+	</div>
+	<!-- end wrapper -->
+	<div class="project-content" id="project_1">
+		<div>
+			<div class="project-details">
+				<span class="icon-close"><i class="pe-7s-close-circle"></i></span>
+				<div class="container">
+					<div class="project-title">
+						<h5>
+							Project Content<span>.</span>
+						</h5>
+						<h2>Example No.1</h2>
+						<div class="separator-container">
+							<div class="separator line-separator">✻</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="project-text">
+								<p>
+									<span>Detail</span>1
+								</p>
+								<p>
+									<span>Detail</span>2
+								</p>
+								<p>
+									<span>Detail</span>3
+								</p>
+								<p>
+									<span>Detail</span>4
+								</p>
+								<br>
+								<p>Not him old music think his found enjoy merry. Listening
+									acuteness dependent at or an. Apartments thoroughly unsatiable
+									terminated sex how themselves. She are ten hours wrong walls
+									stand early. Domestic perceive on an ladyship extended received
+									do. Why jennings our whatever his learning gay perceive. Is
+									against no he without subject. Bed connection unreserved
+									preference partiality not unaffected. Years merit trees so
+									think in hoped we as.</p>
+								<p>Improved own provided blessing may peculiar domestic.
+									Sight house has sex never. No visited raising gravity outward
+									subject my cottage mr be. Hold do at tore in park feet near my
+									case. Invitation at understood occasional sentiments insipidity
+									inhabiting in. Off melancholy alteration principles old. Is do
+									speedily kindness properly oh. Respect article painted cottage
+									he is offices parlors.</p>
+							</div>
+						</div>
+						<div class="col-md-8">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="project-image">
+										<img src="../static/assets/img/rubik_background2.jpg"
+											th:src="@{/assets/img/rubik_background2.jpg}" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="project-image">
+										<img src="../static/assets/img/rubik_background2.jpg"
+											th:src="@{/assets/img/rubik_background2.jpg}" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="project-image">
+										<img src="../static/assets/img/rubik_background2.jpg"
+											th:src="@{/assets/img/rubik_background2.jpg}" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="project-image">
+										<img src="../static/assets/img/rubik_background2.jpg"
+											th:src="@{/assets/img/rubik_background2.jpg}" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="project-content" id="project_2">
+		<div>
+			<div class="project-details">
+				<span class="icon-close"><i class="pe-7s-close-circle"></i></span>
+				<div class="container">
+					<div class="project-title">
+						<h2>Example No.2</h2>
+						<div class="separator-container">
+							<div class="separator line-separator">✻</div>
+						</div>
+						<p>We've been working with Kingsman Studios and we are proud
+							that they enjoy our results.</p>
+					</div>
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1">
+							<div class="article">
+								<div class="project-image">
+									<img src="../static/assets/img/rubik_background2.jpg"
+										th:src="@{/assets/img/rubik_background2.jpg}" />
+								</div>
+								<div class="project-text">
+									<h3>
+										Turnip greens yarrow ricebean rutabaga endive cauliflower sea
+										lettuce<span>.</span>
+									</h3>
+									<p>Not him old music think his found enjoy merry. Listening
+										acuteness dependent at or an. Apartments thoroughly unsatiable
+										terminated sex how themselves. She are ten hours wrong walls
+										stand early. Domestic perceive on an ladyship extended
+										received do. Why jennings our whatever his learning gay
+										perceive. Is against no he without subject. Bed connection
+										unreserved preference partiality not unaffected. Years merit
+										trees so think in hoped we as.</p>
+									<p>
+										Improved own provided blessing may peculiar domestic. Sight
+										house has sex never. No visited raising gravity outward
+										subject my cottage mr be. Hold do at tore in park feet near my
+										case. Invitation at understood occasional sentiments
+										insipidity inhabiting in. Off melancholy alteration principles
+										old. Is do speedily kindness properly oh. Respect article
+										painted cottage he is offices parlors<span>.</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="project-content" id="project_3">
+		<div>
+			<div class="project-details">
+				<span class="icon-close"><i class="pe-7s-close-circle"></i></span>
+				<div class="container">
+					<div class="project-title">
+						<h5>Project Content</h5>
+						<h2>Example No.3</h2>
+						<div class="separator-container">
+							<div class="separator line-separator">✻</div>
+						</div>
+					</div>
+					<div class="product">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="project-text text-right">
+									<p>Pencil’s certified Bluetooth Smart wireless delivers a
+										fast, stable connection with industry-leading power
+										conservation</p>
+									<p>Each Pencil is milled from a single, solid piece of
+										material. Graphite brushed aluminum model shown.</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="project-image">
+									<img src="../static/assets/img/rubik_background3.png"
+										th:src="@{/assets/img/rubik_background3.png}" />
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="project-text">
+									<p>Pencil’s certified Bluetooth Smart wireless delivers a
+										fast, stable connection with industry-leading power
+										conservation</p>
+									<p>Each Pencil is milled from a single, solid piece of
+										material. Graphite brushed aluminum model shown.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Contact Modal -->
+	<div class="modal fade" id="contactModal" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 id="modalHeader" class="modal-title">Default Modal Header</h4>
+				</div>
+				<div class="modal-body">
+					<p id="modalContent">Default text in the modal.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+<!--   core js files    -->
+<script src="../static/assets/js/jquery-1.11.2.min.js"
+	th:src="@{/assets/js/jquery-1.11.2.min.js}" type="text/javascript"></script>
+<script src="../static/assets/js/mailController.js"
+	th:src="@{/assets/js/mailController.js}" type="text/javascript"></script>
+
+<script src="../static/assets/js/bootstrap.js"
+	th:src="@{/assets/js/bootstrap.js}" type="text/javascript"></script>
+
+<!--   file for adding vertical points where we activate the elements animation   -->
+<script type="text/javascript"
+	src="../static/assets/js/jquery.waypoints.min.js"
+	th:src="@{/assets/js/jquery.waypoints.min.js}"></script>
+
+<!--  js library for devices recognition -->
+<script type="text/javascript" src="../static/assets/js/modernizr.js"
+	th:src="@{/assets/js/modernizr.js}"></script>
+
+<!--   file where we handle all the script from the Rubik page   -->
+<script type="text/javascript" src="../static/assets/js/rubick.js"
+	th:src="@{/assets/js/rubick.js}"></script>
+
+<!--  script for google maps   -->
+<script type="text/javascript"
+	src="https://maps.googleapis.com/maps/api/js?sensor=false"
+	th:src="@{https://maps.googleapis.com/maps/api/js(sensor=false)}"></script>
+</html>

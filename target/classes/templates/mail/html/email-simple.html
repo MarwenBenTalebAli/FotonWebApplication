@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title th:remove="all">Template for HTML email (simple)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+	<p
+		th:text="${senderFullName != null} ? 
+		 #{greeting(${senderFullName})}: 
+		 #{greetingFullName(${senderName}, ${senderLastName})}">
+		[HELLO, FULL_NAME STATIC!]</p>
+
+	<!-- <p th:text="#{greeting(${senderName})}">[HELLO, NAME STATIC!]</p> -->
+
+	<span th:text="${#dates.format(subscriptionDate, 'dd-MM-yyyy HH:mm')}">28-12-2012
+		01:58</span>
+	</p>
+	<p th:text="${message}">DEFAULT MESSAGE</p>
+	<p>
+		Regards, <br /> &emsp; <em th:text="${senderPhone}">(+000) 00
+			000 000</em> <em th:text="${senderName}">SENDER NAME</em>
+	</p>
+</body>
+</html>
