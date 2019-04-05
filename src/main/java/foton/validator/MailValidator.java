@@ -34,11 +34,11 @@ public class MailValidator implements Validator {
 //		}
 	}
 
-	private void validateChecked(Errors errors, MailForm mailForm) {
-		if (mailForm.isChecked() == false) {
-			errors.rejectValue("checked", "mailForm.checked");
-		}
-	}
+//	private void validateChecked(Errors errors, MailForm mailForm) {
+//		if (mailForm.isChecked() == false) {
+//			errors.rejectValue("checked", "mailForm.checked");
+//		}
+//	}
 
 	public void validateSenderEmail(Errors errors, MailForm mailForm) {
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "senderEmail", "email.notempty");

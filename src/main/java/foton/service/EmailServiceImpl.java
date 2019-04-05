@@ -80,8 +80,7 @@ public class EmailServiceImpl implements EmailService {
 		mailForm.setRecipientEmail(environment.getProperty(EMAIL_SITE));
 
 		message.setFrom(mailForm.getSenderEmail());
-		//message.setTo(environment.getProperty(EMAIL_SITE));
-		message.setTo("marwen.bentaleb@gmail.com");
+		message.setTo(environment.getProperty(EMAIL_SITE));
 		
 
 		// Create the HTML body using Thymeleaf

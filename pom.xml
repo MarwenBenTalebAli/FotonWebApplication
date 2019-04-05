@@ -66,11 +66,6 @@
 			<version>1.4</version>
 		</dependency>
 		<dependency>
-			<groupId>org.json</groupId>
-			<artifactId>json</artifactId>
-			<version>20180813</version>
-		</dependency>
-		<dependency>
 			<groupId>com.jayway.restassured</groupId>
 			<artifactId>rest-assured</artifactId>
 			<version>2.9.0</version>
