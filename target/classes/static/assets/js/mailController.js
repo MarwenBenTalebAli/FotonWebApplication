@@ -33,7 +33,9 @@ $(document).ready(
 				// errorMail(xhr, status, error)
 				// }
 				}).done(function(data) {
-					console.log("done: ", data);
+					console.log("data: ", data);
+					console.log("message: ", data.message);
+					console.log("ApiError_success: ", data.ApiError);
 					if (data.status === "OK") {
 						$("#modalHeader").text("Success!");
 						$("#modalContent").text(data.message);
@@ -46,33 +48,48 @@ $(document).ready(
 					}
 				}).fail(
 						function(data) {
-							var apiError = JSON.parse(data.responseText);
-							var mapErrors = apiError.mapErrors;
+							console.log("fail: ", data);
 
-							var fullNameError = mapErrors.senderFullName;
-							var emailError = mapErrors.senderEmail;
-							var messageError = mapErrors.message;
+							if (data.status === 400) {
+								var apiError = JSON.parse(data.responseText);
+								var mapErrors = apiError.mapErrors;
 
-							$("#modalHeader").text(apiError.message);
-							$("#modalContent").multiline(fullNameError,
-									emailError, messageError);
+								var fullNameError = mapErrors.senderFullName;
+								var emailError = mapErrors.senderEmail;
+								var messageError = mapErrors.message;
 
-							// $("#modalContent").multiline(
-							// "FullName: " + fullNameError + "\n"
-							// + "Email: " + emailError + "\n"
-							// + "Message: " + messageError);
-
-							$('#contactModal').modal('show');
-							$('#contactForm')[0].reset();
+								$("#modalHeader").text(apiError.message);
+								$("#modalContent").multiline(fullNameError,
+										emailError, messageError);
+								$('#contactModal').modal('show');
+								$('#contactForm')[0].reset();
+							} else if (data.status === 500) {
+								var apiError = JSON.parse(data.responseText);
+								$("#modalHeader")
+										.text("Internal Server Error.");
+								$("#modalContent").text(apiError.message);
+								$('#contactModal').modal('show');
+								$('#contactForm')[0].reset();
+							}
 						});
 			}
 
-			$.fn.multiline = function(fullNameError, emailError, messageError) {
-
-				console.log("fullNameError: ", fullNameError);
-				console.log("emailError: ", emailError);
-				console.log("messageError: ", messageError);
+			function getSimpleErrorMessage(fullNameError, emailError,
+					messageError) {
 				var text;
+
+				if (fullNameError !== undefined || emailError !== undefined
+						|| messageError !== undefined) {
+					text = "Please fill the form correctly.";
+				}
+				return text;
+			}
+
+			function getFullErrorMessage(fullNameError, emailError,
+					messageError) {
+
+				var text;
+
 				if (fullNameError !== undefined && emailError !== undefined
 						&& messageError !== undefined) {
 					text = "FullName: " + fullNameError + "\n" + "Email: "
@@ -102,7 +119,15 @@ $(document).ready(
 					text = "Message: " + messageError;
 				}
 				console.log("text: ", text);
-				this.text(text);
+				return text;
+			}
+
+			$.fn.multiline = function(fullNameError, emailError, messageError) {
+//				var fullErrorMessage = getFullErrorMessage(fullNameError,
+//						emailError, messageError);
+				var simpleErrorMessage = getSimpleErrorMessage(fullNameError,
+						emailError, messageError);
+				this.text(simpleErrorMessage);
 				this.html(this.html().replace(/\n/g, '<br/>'));
 				return this;
 			}

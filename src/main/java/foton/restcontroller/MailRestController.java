@@ -40,7 +40,8 @@ public class MailRestController {
 	public static final String EMAIL_SUCCESS_MESSAGE = "Your message has been successfully sent. "
 			+ "We will contact you very soon!";
 
-	private static final String UNABLE_TO_SEND = "Unable to send email";
+	private static final String UNABLE_TO_SEND = "Unable to send email.";
+	private static final String INTERNAL_SERVER_ERROR = "The server was unable to complete your request.";
 
 	private final EmailService emailService;
 	private final MailValidator mailValidator;
@@ -88,15 +89,16 @@ public class MailRestController {
 			Mail mail = DTOUtil.map(mailForm, Mail.class);
 			try {
 				this.emailService.sendHtmlMail(mail);
+				headers.setLocation(location);
+				ApiError apiError = new ApiError(HttpStatus.OK, EMAIL_SUCCESS_MESSAGE, mapErrors);
+				response = new ResponseEntity<Object>(apiError, headers, HttpStatus.OK);
 			} catch (MessagingException messagingException) {
-				ApiError apiError = new ApiError(HttpStatus.INTERNAL_SERVER_ERROR,
-						messagingException.getLocalizedMessage(), mapErrors);
+				mapErrors.put(messagingException.getLocalizedMessage(), messagingException.getMessage());
+				ApiError apiError = new ApiError(HttpStatus.INTERNAL_SERVER_ERROR, INTERNAL_SERVER_ERROR, mapErrors);
 				response = new ResponseEntity<Object>(apiError, HttpStatus.INTERNAL_SERVER_ERROR);
 			}
-			headers.setLocation(location);
-			ApiError apiError = new ApiError(HttpStatus.OK, EMAIL_SUCCESS_MESSAGE, mapErrors);
-			response = new ResponseEntity<Object>(apiError, headers, HttpStatus.OK);
 		}
+		System.out.println("Response: " + response.toString());
 		return response;
 	}
 

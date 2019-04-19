@@ -128,7 +128,7 @@ public class SpringMailConfig implements ApplicationContextAware, EnvironmentAwa
 		templateResolver.setOrder(Integer.valueOf(3));
 		// No resolvable pattern, will simply process as a String template
 		// everything not previously matched
-		templateResolver.setTemplateMode("HTML5");
+		templateResolver.setTemplateMode(TemplateMode.HTML5);
 		templateResolver.setCacheable(false);
 		return templateResolver;
 	}
